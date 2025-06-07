@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cakePink: '#FECDD3',
+                        cakeYellow: '#FFD89C',
+                        cakePurple: '#D8B4FE',
+                        cakeGreen: '#A7F3D0',
+                        cakeBrown: '#D6BCA4',
+                    },
+                    fontFamily: {
+                        vazir: ['Vazir', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .bg-grocery {
+                background-image: url('https://i.postimg.cc/tRVnSfTY/Image.png');
+            }
+            [dir="rtl"] .rotate-90 {
+                transform: rotate(-90deg);
+            }
+            [dir="rtl"] .group-hover\:rotate-0:hover {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+    <title>کیک فروشی میکا</title>
+</head>
+
+<body class="text-gray-800">
+    <header class="bg-cakePink">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex gap-4 items-center"  data-aos="fade-left">
+                    <div class="flex justify-center items-center h-12 w-12 p-2 bg-white rounded-full">
+                        <i class="fas fa-cake-candles text-2xl text-cakeBrown"></i>
+                    </div>
+                    <h1 class="text-2xl text-rose-800 font-bold">کیک‌های خوشمزه</h1>
+                </div>
+
+                <nav class="hidden md:block" data-aos="zoom-in">
+                    <ul class="flex gap-8">
+                        <li><a href="#" class="text-lg font-bold py-2 hover:text-red-600 transition-300">خانه</a></li>
+                        <li><a href="#" class="text-lg font-bold py-2 hover:text-red-600 transition-300">انواع کیک</a>
+                        </li>
+                        <li><a href="#" class="text-lg font-bold py-2 hover:text-red-600 transition-300">درباره ما</a>
+                        </li>
+                        <li><a href="#" class="text-lg font-bold py-2 hover:text-red-600 transition-300">نظرات
+                                مشتریان</a></li>
+                        <li><a href="#" class="text-lg font-bold py-2 hover:text-red-600 transition-300">تماس با ما</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="flex items-center" data-aos="fade-right">
+                    <button class="p-2 text-rose-800 ml-4">
+                        <i class="fas fa-shopping-cart text-2xl"></i>
+                    </button>
+                    <button class="text-rose-800 block md:hidden">
+                        <i id="mobile-menu-btn" class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <nav id="mobile-menu" class="mt-4 mr-2 hidden md:hidden">
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#" class="block text-xl font-bold py-2 px-2 hover:text-red-600 transition-300">خانه</a>
+                    </li>
+                    <li><a href="#" class="block text-xl font-bold py-2 px-2 hover:text-red-600 transition-300">انواع
+                            کیک</a></li>
+                    <li><a href="#" class="block text-xl font-bold py-2 px-2 hover:text-red-600 transition-300">درباره
+                            ما</a></li>
+                    <li><a href="#" class="block text-xl font-bold py-2 px-2 hover:text-red-600 transition-300">نظرات
+                            مشتریان</a></li>
+                    <li><a href="#" class="block text-xl font-bold py-2 px-2 hover:text-red-600 transition-300">تماس با
+                            ما</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="py-10 md:py-16 bg-gradient-to-tl from-cakeYellow to-cakePink">
+            <div class="container px-4 mx-auto flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 flex flex-col gap-4 md:pr-10 text-center md:text-right">
+                    <h2 class="text-4xl md:text-5xl font-bold text-rose-800" data-aos="zoom-in">کیک‌های تازه با طعم‌های خاطره‌انگیز!</h2>
+                    <p class="text-rose-700 text-xl mb-4" data-aos="zoom-in">در کیک‌های خوشمزه، هر لقمه‌ای تجربه‌ای از عشق، هنر و خلاقیت
+                        است</p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                        <button
+                            class="bg-rose-700 font-bold py-3 px-8 rounded-full text-white hover:bg-rose-800 hover:scale-105 transition max-sm:w-full" data-aos="fade-left">سفارش
+                            آنلاین</button>
+                        <button
+                            class="bg-white font-bold py-3 px-8 hover:bg-cakeGreen rounded-full transition hover:scale-105 text-rose-700 border-2 border-rose-700 max-sm:w-full" data-aos="fade-right">مشاهده
+                            منو</button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0 relative">
+                    <div class="relative flex justify-center">
+                        <div
+                            class="floating-icon absolute h-16 w-16 bg-cakePurple rounded-full top-14 -left-5 flex justify-center items-center shadow-lg max-sm:left-2">
+                            <i class="fas fa-stars"></i>
+                        </div>
+                        <div
+                            class="floating-icon absolute h-16 w-16 bg-cakeGreen flex justify-center items-center rounded-full shadow-lg top-0 left-20 max-sm:left">
+                            <i class="fas fa-medal text-yellow-400 text-2xl"></i>
+                        </div>
+                        <div
+                            class="floating-icon absolute w-16 h-16 rounded-full bg-white flex justify-center items-center shadow-lg top-40 -left-5 max-sm:-left-2">
+                            <i class="fas fa-heart text-red-600 text-2xl"></i>
+                        </div>
+                        <div class="w-4/5 relative z-10" data-aos="zoom-in">
+                            <div class="flex items-center justify-center">
+                                <img src="https://i.postimg.cc/X7jBvqqL/photo-1563729784474-d77dbb933a9e.avif"
+                                    class="rounded-full border-8 border-white shadow-2xl object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-cakeYellow bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14" data-aos="fade-left">
+                <h2 class="text-rose-700 font-bold text-3xl md:text-4xl mb-4">طعم‌های متنوع و دلچسب</h2>
+                <p class="text-rose-700 text-xl">با انتخاب از بین طعم‌های خوشمزه ما، لحظاتی شیرین خلق کنید</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <button
+                    class="flavor-button flex flex-col items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div class="bg-cakePink h-20 w-20 flex justify-center items-center rounded-full mb-4" data-aos="fade-up">
+                        <i class="fas fa-stroopwafel text-3xl text-rose-800"></i>
+                    </div>
+                    <h3 class="text-rose-800 font-bold text-xl md:text-2xl"  data-aos="fade-up">وانیل و شکلات</h3>
+                </button>
+                <button
+                    class="flavor-button flex flex-col items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div class="bg-cakeGreen h-20 w-20 flex justify-center items-center rounded-full mb-4"  data-aos="fade-up">
+                        <i class="fas fa-leaf text-3xl text-green-800"></i>
+                    </div>
+                    <h3 class="text-rose-800 font-bold text-xl md:text-2xl" data-aos="fade-up">توت فرنگی</h3>
+                </button>
+                <button
+                    class="flavor-button flex flex-col items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div class="bg-cakePurple h-20 w-20 flex justify-center items-center rounded-full mb-4" data-aos="fade-up">
+                        <i class="fas fa-wine-bottle text-3xl text-purple-800"></i>
+                    </div>
+                    <h3 class="text-rose-800 font-bold text-xl md:text-2xl" data-aos="fade-up">موز و گردو</h3>
+                </button>
+                <button
+                    class="flavor-button flex flex-col items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div class="bg-cakeBrown h-20 w-20 flex justify-center items-center rounded-full mb-4" data-aos="fade-up">
+                        <i class="fas fa-cookie text-3xl text-brown-800"></i>
+                    </div>
+                    <h3 class="text-rose-800 font-bold text-xl md:text-2xl" data-aos="fade-up">قهوه و کارامل</h3>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-cakeGreen bg-opacity-30 py-16">
+        <div class="container px-4 mx-auto">
+            <div class="flex flex-col md:flex-row md:gap-8 items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
+                    <img src="https://i.postimg.cc/QxWQ43x3/Flux-Dev-a-surreal-and-vibrant-cinematic-photo-of-a-dreamlike-0.jpg"
+                        class="w-full rounded-2xl">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-rose-700 font-bold text-3xl md:text-4xl mb-4">درباره کیک های خوشمزه</h2>
+                    <p class="text-xl mb-8">ما در کیک‌های خوشمزه با بیش از ۱۵ سال تجربه، به تولید کیک‌های با کیفیت و
+                        خوشمزه شهرت داریم. تمامی مواد اولیه ما از باکیفیت‌ترین تولیدکنندگان داخلی و بین‌المللی انتخاب
+                        می‌شوند.</p>
+                    <div class="grid grid-cols-2 gap-10 mb-8">
+                        <div class="bg-white flex flex-col gap-2 p-4 rounded-2xl shadow-2xl">
+                            <div class="">
+                                <i class="fas fa-award text-3xl text-rose-700"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold">کیفیت ممتاز</h4>
+                            <p>گواهینامه ISO 22000</p>
+                        </div>
+                        <div class="bg-white flex flex-col gap-2 p-4 rounded-2xl shadow-2xl">
+                            <div class="">
+                                <i class="fas fa-leaf text-3xl text-rose-700"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold">طبیعی و سالم</h4>
+                            <p>فاقد مواد نگهدارنده</p>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-rose-700 text-white font-bold px-8 py-3 rounded-full hover:bg-rose-800 hover:scale-105 transition shadow-lg">داستان
+                        کامل ما</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container px-4 py-16 mx-auto">
+            <div class="text-center mb-10" data-aos="fade-left">
+                <h2 class="text-rose-700 font-bold text-3xl md:text-4xl mb-4">پرفروش های ما</h2>
+                <p class="text-rose-700 text-xl">کیک‌هایی که بیشترین نظر مشتریان رو به خود جلب کردند</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="cake-card bg-gradient-to-br from-white to-cakeYellow rounded-2xl overflow-hidden shadow-lg"
+                data-aos="zoom-in">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/BQHQM5XM/photo-1578985545062-69928b1d9587.avif"
+                            class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer">
+                        <div class="absolute top-5 left-5 px-3 py-1 text-sm bg-rose-700 text-white rounded-full">ویژه
+                        </div>
+                    </div>
+                    <div class="flex flex-col py-6 px-4">
+                        <h2 class="text-rose-700 font-bold text-xl mb-2">کیک شکلاتی دبل لاور</h2>
+                        <p class="text-gray-600 mb-4">با سه لایه خامه شکلاتی و طعمی بی‌نظیر از بهترین کاکائوها</p>
+                        <div class="flex justify-between" data-aos="fade-right">
+                            <span class="text-rose-700 font-bold text-2xl">۲۹۰,۰۰۰ تومان</span>
+                            <button class="text-white bg-rose-700 py-2 px-4 rounded-full hover:bg-rose-800">افزودن به
+                                سبد</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cake-card bg-gradient-to-br from-white to-cakeYellow rounded-2xl overflow-hidden shadow-lg"
+                data-aos="zoom-in">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/K85cyZ7T/photo-1557925923-cd4648e211a0.avif"
+                            class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    </div>
+                    <div class="flex flex-col py-6 px-4">
+                        <h2 class="text-rose-700 font-bold text-xl mb-2">کیک شاه‌توت فصلی</h2>
+                        <p class="text-gray-600 mb-4">با توت‌های تازه فصل و خامه وانیلی مخصوص، مناسب جشن‌ها</p>
+                        <div class="flex justify-between" data-aos="fade-right">
+                            <span class="text-rose-700 font-bold text-2xl">۳۲۰,۰۰۰ تومان</span>
+                            <button class="text-white bg-rose-700 py-2 px-4 rounded-full hover:bg-rose-800">افزودن به
+                                سبد</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cake-card bg-gradient-to-br from-white to-cakeYellow rounded-2xl overflow-hidden shadow-lg"
+                data-aos="zoom-in">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/HxyfdzGN/images.jpg"
+                            class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    </div>
+                    <div class="flex flex-col py-6 px-4">
+                        <h2 class="text-rose-700 font-bold text-xl mb-2">کیک مخصوص مناسبت‌ها</h2>
+                        <p class="text-gray-600 mb-4">طراحی سفارشی، با طعم انتخابی شما، کیک کاملاً متناسب با سلیقه شما
+                        </p>
+                        <div class="flex justify-between" data-aos="fade-right"> 
+                            <span class="text-rose-700 font-bold text-2xl">از ۴۰۰,۰۰۰ تومان</span>
+                            <button
+                                class="text-white bg-rose-700 py-2 px-4 rounded-full hover:bg-rose-800">سفارش</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-cakePurple bg-opacity-10">
+        <div class="container px-4 mx-auto">
+            <div class="text-center mb-16"  data-aos="fade-left">
+                <h2 class="text-rose-700 font-bold text-3xl md:text-4xl mb-4">گالری کارهای ما</h2>
+                <p class="text-rose-700 text-xl">نمونه‌هایی از زیباترین کیک‌های طراحی شده توسط تیم ما</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in">
+                    <img src="https://i.postimg.cc/rpPNQ2H6/photo-1571115177098-24ec42ed204d.avif"
+                        class="hover:scale-110 w-full h-full object-cover transition-transform duration-300 cursor-pointer">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in">
+                    <img src="https://i.postimg.cc/VNdVYgQ8/unnamed.jpg"
+                        class="hover:scale-110 w-full h-full object-cover transition-transform duration-300 cursor-pointer">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in">
+                    <img src="https://i.postimg.cc/wMHykW98/9a70ba67ceb5b34bbbe5473f8d9a7986.jpg"
+                        class="hover:scale-110 w-full h-full object-cover transition-transform duration-300 cursor-pointer">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in">
+                    <img src="https://i.postimg.cc/mZNFrGSb/Fathers-birthday-cake-celebration-1024x574.webp"
+                        class="hover:scale-110 w-full h-full object-cover transition-transform duration-300 cursor-pointer">
+                </div>
+            </div>
+            <div class="text-center mt-10" data-aos="fade-up">
+                <button
+                    class="bg-rose-700 text-white text-lg px-5 py-3 md:text-xl md: rounded-full hover:bg-rose-800 hover:scale-105 transition duration-300">مشاهده
+                    گالری کامل</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gradient-to-tl from-cakePurple to-cakePink">
+        <div class="container px-4 mx-auto">
+            <div class="text-center mb-12" data-aos="fade-left">
+                <h2 class="text-white text-3xl md:text-4xl font-bold mb-4">نظرات مشتریان راضی</h2>
+                <p class="text-white text-xl text-opacity-80">تجربه خرید دیگر افراد از کیک‌های خوشمزه</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl flex flex-col gap-4 p-6 transition hover:-translate-y-2" data-aos="fade-left">
+                    <div class="flex gap-4">
+                        <div class="overflow-hidden h-12 w-12 rounded-full">
+                            <img src="https://i.postimg.cc/Dzg81Zhf/32.jpg" alt="">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="font-bold">فاطمه احمدی</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500">کیک عروسی‌ام رو از اینجا سفارش دادم و فوق‌العاده بود! همه مهمونا تعریف کردن
+                        از طعم و ظاهر زیبای کیک. ممنون از تیم حرفه‌ای‌تون.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl flex flex-col gap-4 p-6 transition hover:-translate-y-2" data-aos="fade-up">
+                    <div class="flex gap-4">
+                        <div class="overflow-hidden h-12 w-12 rounded-full">
+                            <img src="https://i.postimg.cc/ydpxrbWw/75.jpg" alt="">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="font-bold">علیرضا حسینی</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500">برای جشن تولد پسرم کیک سفارش دادم. هم قیمت مناسب بود هم کیفیت عالی داشت.
+                        پسرم که خیلی سخت‌پسنده از طعم کیک راضی بود.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl flex flex-col gap-4 p-6 transition hover:-translate-y-2" data-aos="fade-right">
+                    <div class="flex gap-4">
+                        <div class="overflow-hidden h-12 w-12 rounded-full">
+                            <img src="https://i.postimg.cc/7hChvn2b/63.jpg" alt="">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="font-bold">مینا محمدی</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500">هر ماه برای دفتر کارم کیک سفارش می‌دم. تنوع طعم‌ها عالیه و همیشه تازه و
+                        خوشمزه هستند. پرسنل بسیار مودب و حرفه‌ای هم دارن.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container px-4 mx-auto">
+            <div class="text-center mb-12" data-aos="fade-left">
+                <h2 class="text-rose-700 font-bold text-3xl md:text-4xl mb-4">سوالات متداول</h2>
+                <p class="text-rose-700 text-xl">پاسخ به رایج‌ترین سوالات شما</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="border border-gray-200 rounded-2xl shadow-xl transition-transform overflow-hidden mb-6" data-aos="fade-left">
+                    <button
+                        class="faq-toggle flex justify-between items-center p-6 w-full bg-gray-50 hover:bg-gray-100 transition">
+                        <span class="font-bold text-lg md:text-.5xl">نحوه سفارش کیک به چه صورت است؟</span>
+                        <i class="fas fa-chevron-down text-rose-700 transition-transform"></i>
+                    </button>
+                    <div class="faq-content text-gray-700 px-6 py-3 hidden">
+                        می‌توانید به صورت آنلاین از سایت ما سفارش دهید یا با شماره تلفن ما تماس بگیرید. همچنین می‌توانید
+                        به صورت حضوری به شیرینی‌پزی ما مراجعه کنید و با مشاوره کارشناسان ما، کیک مورد نظرتان را انتخاب
+                        کنید.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl shadow-xl transition-transform overflow-hidden mb-6" data-aos="fade-right"> 
+                    <button
+                        class="faq-toggle flex justify-between items-center p-6 w-full bg-gray-50 hover:bg-gray-100 transition">
+                        <span class="font-bold text-lg md:text-.5xl">آیا امکان سفارش کیک با طرح سفارشی وجود دارد؟</span>
+                        <i class="fas fa-chevron-down text-rose-700 transition-transform"></i>
+                    </button>
+                    <div class="faq-content text-gray-700 px-6 py-3 hidden">
+                        بله، ما با تیم طراحی حرفه‌ای این امکان را برای شما فراهم کرده‌ایم که کیک خود را با هر طرح و
+                        موضوعی که دوست دارید سفارش دهید. کافی است نمونه طرح خود را برای ما ارسال کنید.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl shadow-xl transition-transform overflow-hidden mb-6" data-aos="fade-left">
+                    <button
+                        class="faq-toggle flex justify-between items-center p-6 w-full bg-gray-50 hover:bg-gray-100 transition">
+                        <span class="font-bold text-lg md:text-.5xl">مدت زمان آماده سازی کیک چقدر است؟</span>
+                        <i class="fas fa-chevron-down text-rose-700 transition-transform"></i>
+                    </button>
+                    <div class="faq-content text-gray-700 px-6 py-3 hidden">
+                        کیک‌های ساده معمولاً در همان روز آماده می‌شوند. برای کیک‌های سفارشی و ویژه، بسته به طرح و
+                        پیچیدگی آن، بین ۲ تا ۵ روز زمان نیاز است. توصیه می‌کنیم حداقل ۴۸ ساعت قبل سفارش دهید.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl shadow-xl transition-transform overflow-hidden mb-6" data-aos="fade-right">
+                    <button
+                        class="faq-toggle flex justify-between items-center p-6 w-full bg-gray-50 hover:bg-gray-100 transition">
+                        <span class="font-bold text-lg md:text-.5xl">آیا امکان پرداخت آنلاین وجود دارد؟</span>
+                        <i class="fas fa-chevron-down text-rose-700 transition-transform"></i>
+                    </button>
+                    <div class="faq-content text-gray-700 px-6 py-3 hidden">
+                        بله، شما می‌توانید به صورت کامل از طریق درگاه‌های بانکی معتبر موجود در سایت، پرداخت خود را انجام
+                        دهید. همچنین امکان پرداخت نقدی در زمان تحویل نیز وجود دارد.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gradient-to-l from-cakePink to-cakeYellow">
+        <div class="container px-4 mx-auto" data-aos="fade-up">
+            <div class="pulsing-banner max-w-5xl mx-auto bg-white shadow-2xl rounded-3xl p-1">
+                <div
+                    class="flex justify-center items-center flex-col p-8 md:flex-row bg-gradient-to-r from-rose-600 to-rose-800 rounded-3xl text-white">
+                    <div class="text-center m-8 md:text-right md:w-3/5" data-aos="fade-left">
+                        <h2 class="font-bold text-3xl md:text-4xl mb-4">پیشنهاد ویژه برای عضویت</h2>
+                        <p class="text-lg mb-6">
+                            با عضویت در باشگاه مشتریان، از تخفیف‌های ویژه و هدیه‌های خاص مناسبت‌ها بهره‌مند شوید
+                        </p>
+                        <div class="text-center md:text-right max-sm:space-y-4">
+                            <button
+                                class="bg-white text-rose-700 font-bold px-8 py-3 rounded-full hover:bg-cakeGreen transition max-sm:w-full">ثبت
+                                نام</button>
+                            <button
+                                class="bg-transparent font-bold px-6 py-3 rounded-full border-2 hover:bg-rose-800 transition mr-2 max-sm:w-full max-sm:mr-0">اطلاعات
+                                بیشتر</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-1 rounded-xl md:w-2/5 mt-4 md:mt-0" data-aos="fade-right">
+                        <div class="relative">
+                            <div
+                                class="absolute -top-10 -right-10 w-20 h-20 bg-cakeGreen flex justify-center items-center rounded-full shadow-xl">
+                                <span class="text-2xl text-rose-700 font-semibold">%۲۵</span>
+                            </div>
+                            <img src="https://i.postimg.cc/43psc4DL/photo-1614707267537-b85aaf00c4b7.avif"
+                                class="rounded-xl shadow-xl w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-rose-800 text-white pt-12 pb-8">
+        <div class="container px-4 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div data-aos="fade-left">
+                    <h3 class="font-bold text-xl mb-4">کیک‌های خوشمزه</h3>
+                    <p class="mb-4 text-rose-100">
+                        شیرینی‌پزی با بیش از ۱۵ سال سابقه در تولید انواع کیک‌های مناسبت‌های ویژه و روزمره
+                    </p>
+                    <div class="flex gap-2">
+                        <a href="#"
+                            class="w-12 h-12 bg-rose-700 flex justify-center items-center rounded-full shadow-xl hover:bg-rose-400 hover:text-rose-700 hover:scale-105 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 bg-rose-700 flex justify-center items-center rounded-full shadow-xl hover:bg-rose-400 hover:text-rose-700 hover:scale-105 transition">
+                            <i class="fab fa-telegram text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 bg-rose-700 flex justify-center items-center rounded-full shadow-xl hover:bg-rose-400 hover:text-rose-700 hover:scale-105 transition">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h3 class="font-bold text-xl mb-4">دسترسی سریع</h3>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="#" class="font-bold text-rose-100 hover:text-rose-400 transition">انواع کیک</a></li>
+                        <li><a href="#" class="font-bold text-rose-100 hover:text-rose-400 transition">پیشنهادهای ویژه</a></li>
+                        <li><a href="#" class="font-bold text-rose-100 hover:text-rose-400 transition">درباره ما</a></li>
+                        <li><a href="#" class="font-bold text-rose-100 hover:text-rose-400 transition">وبلاگ</a></li>
+                        <li><a href="#" class="font-bold text-rose-100 hover:text-rose-400 transition">تماس با ما</a></li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h3 class="font-bold text-xl mb-4">ساعات کاری</h3>
+                    <ul class="flex flex-col gap-2">
+                        <li class="flex justify-between text-rose-100">
+                            <span>شنبه تا چهارشنبه</span>
+                            <span>۹ صبح - ۱۰ شب</span>
+                        </li>
+                        <li class="flex justify-between text-rose-100">
+                            <span>پنج‌شنبه</span>
+                            <span>۹ صبح - ۱۲ شب</span>
+                        </li>
+                        <li class="flex justify-between text-rose-100">
+                            <span>جمعه</span>
+                            <span>۱۰ صبح - ۱۱ شب</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h3 class="font-bold text-xl mb-4">تماس با ما</h3>
+                    <ul class="flex flex-col gap-2">
+                        <li class="flex items-center gap-2 text-rose-100">
+                            <i class="fas fa-map-marker-alt text-cakeYellow"></i>
+                            <span>تهران، خیابان انقلاب، پلاک ۱۲۳</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-rose-100" >
+                            <i class="fas fa-phone text-cakeYellow"></i>
+                            <span>۰۲۱-۱۲۳۴۵۶۷۸</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-rose-100">
+                            <i class="fas fa-envelope text-cakeYellow"></i>
+                            <span>info@cakeshop.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-rose-700 pt-6 mt-6 text-center text-rose-200">
+                <p>ایجاد شده توسط علی شیدایی خرداد ١۴٠۴</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="w-12 h-12 fixed left-5 bottom-5 bg-pink-500 rounded-full text-rose-700 shadow-xl hover:bg-rose-700 hover:text-white transition opacity-100 z-999 border-2 border-rose-400">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:1000,
+            once:true,
+            easing: 'ease-in-out', 
+            offset: 120, 
+            delay: 0, 
+            mirror: false
+        })
+    </script>
+</body>
+
+</html>
